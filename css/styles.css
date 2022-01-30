@@ -6,10 +6,11 @@
   --primary-color-dark: #b65303;
   --primary-color-light: #e69e63;
   --secondary-color: #0a0b1d;
-  --secondary-color-light: #5053aa;
-  --tertiary-color: #97EAD2;
+  --secondary-color-light: #13165a;
+  --tertiary-color: #A2FAA3;
   --primary-text-color: #2e2e2e;
   --secondary-text-color: #f1f1f1;
+  --tertiary-text-color: #5053aa;
   --navbar-text-color: #000000;
 }
 
@@ -45,9 +46,23 @@ img {
   width: 100%;
 }
 
+input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none; 
+}
+
+input:focus {
+  outline: none;
+}
+
 /* Navbar */
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
   height: 50px;
@@ -197,7 +212,6 @@ img {
   padding: 50px 0;
   width: 90%;
   border-top: 1px solid rgba(10, 11, 29, 0.3);
-  border-bottom: 1px solid rgba(10, 11, 29, 0.3);
   grid-template-columns: repeat(6, 1fr);
 }
 
@@ -215,11 +229,27 @@ img {
   border-radius: 15px;
 }
 
+.code a {
+  margin: 50px 0;
+}
+
 /* Newsletter */
 
 .newsletter {
+  padding: 50px 0;
+  text-align: center;
   background-color: var(--secondary-color);
-  height: 300px;
+  color: var(--secondary-text-color);
+}
+
+.newsletter p {
+  margin: 20px 0 30px;
+}
+
+.newsletter input {
+  width: 25vw;
+  background-color: var(--secondary-color-light);
+  color: var(--secondary-text-color);
 }
 
 /* DEBUGGING CLASSES */

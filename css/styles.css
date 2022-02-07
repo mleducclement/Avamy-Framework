@@ -7,7 +7,8 @@
   --primary-color-dark: #b65303;
   --primary-color-light: #e69e63;
   --primary-color-button-press: #ff9900;
-  --secondary-color: #0a0b1d;
+  /* --secondary-color: #0a0b1d; */
+  --secondary-color: #0e102c;
   --secondary-color-light: #13165a;
   --tertiary-color: #A2FAA3;
   --primary-text-color: #2e2e2e;
@@ -191,14 +192,15 @@ input:focus {
   transform: skewY(-2deg);
 }
 
-/* Features */
+/* Overview */
 
-.quick-features .grid {
+.overview .grid {
   align-items: start;
   margin-top: 100px;
 }
 
-.quick-features .grid h3 {
+.overview .grid h3 {
+  font-size: 1.1rem;
   margin: 0 0 20px;
   color: var(--secondary-color-light);
 }
@@ -326,6 +328,10 @@ input:focus {
   padding: 3rem;
   background: #050505;
   color: var(--secondary-text-color);
+}
+
+.footer li {
+  font-size: 1.3rem;
 }
 
 .footer a:hover {

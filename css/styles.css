@@ -6,6 +6,7 @@
   --primary-color: #e46701;
   --primary-color-dark: #b65303;
   --primary-color-light: #e69e63;
+  --primary-color-button-press: #ff9900;
   --secondary-color: #0a0b1d;
   --secondary-color-light: #13165a;
   --tertiary-color: #A2FAA3;
@@ -301,6 +302,42 @@ input:focus {
 
 .feature-text-reverse {
   grid-column: 2 / span 2;
+}
+
+.features .feature-section:nth-child(1) {
+  border-top: none;
+}
+
+.features .feature-section:nth-child(4) {
+  border-bottom: 1px solid rgba(146, 80, 36, 0.6);
+}
+
+/* Call to action */
+
+.cta {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* Footer */
+
+.footer {
+  padding: 3rem;
+  background: #050505;
+  color: var(--secondary-text-color);
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer .social {
+  text-align: right;
+}
+
+.footer .social i {
+  margin: 0px 10px;
 }
 
 /* DEBUGGING CLASSES */

@@ -33,10 +33,6 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-reverse {
-
-}
-
 .text-center {
   text-align: center;
 }
@@ -55,7 +51,7 @@
   color: var(--secondary-color);}
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color-button-press);
   transition: linear 0.2s;
 }
 
@@ -67,6 +63,6 @@
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-button-press);
   color: var(--secondary-text-color);
 }

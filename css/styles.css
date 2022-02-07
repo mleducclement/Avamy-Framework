@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;600;700&display=swap');
+
 /* Color variables */
 
 :root {
@@ -191,12 +192,12 @@ input:focus {
 
 /* Features */
 
-.features .grid {
+.quick-features .grid {
   align-items: start;
   margin-top: 100px;
 }
 
-.features .grid h3 {
+.quick-features .grid h3 {
   margin: 0 0 20px;
   color: var(--secondary-color-light);
 }
@@ -212,6 +213,7 @@ input:focus {
   padding: 50px 0;
   width: 90%;
   border-top: 1px solid rgba(10, 11, 29, 0.3);
+  border-bottom: 1px solid rgba(10, 11, 29, 0.3);
   grid-template-columns: repeat(6, 1fr);
 }
 
@@ -230,6 +232,7 @@ input:focus {
 }
 
 .code a {
+  width: 60%;
   margin: 50px 0;
 }
 
@@ -238,18 +241,66 @@ input:focus {
 .newsletter {
   padding: 50px 0;
   text-align: center;
-  background-color: var(--secondary-color);
-  color: var(--secondary-text-color);
 }
 
 .newsletter p {
-  margin: 20px 0 30px;
+  margin: 20px auto 40px;
+  width: 600px;
+}
+
+.newsletter form {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
 }
 
 .newsletter input {
-  width: 25vw;
-  background-color: var(--secondary-color-light);
+  padding: 10px 0 10px 25px;
+  width: 500px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+.newsletter input::placeholder {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.newsletter button {
+  height: 50px;
+  width: 30%;
+  position: absolute;
+  right: 0px;
+  background-color: var(--primary-color);
   color: var(--secondary-text-color);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+/* Features */
+
+.features {
+  background-color: var(--secondary-color);
+  padding: 50px 0;
+}
+
+.feature-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  border-top: 1px solid rgba(146, 80, 36, 0.6);
+}
+
+.feature-text {
+  padding: 50px 20px;
+  grid-column: 1 / span 2;
+}
+
+.feature-text-reverse {
+  grid-column: 2 / span 2;
 }
 
 /* DEBUGGING CLASSES */

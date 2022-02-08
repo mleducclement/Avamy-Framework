@@ -113,3 +113,9 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+}

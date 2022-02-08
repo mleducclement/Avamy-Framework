@@ -1,33 +1,40 @@
-(function() {
-  let elements;
-  let windowHeight;
+const featureSections = document.querySelectorAll(".feature-section");
 
-  function init() {
-    elements = document.querySelectorAll('.hidden');
-    windowHeight = window.innerHeight;
-  }
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
 
-  function checkPosition() {
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var positionFromTop = elements[i].getBoundingClientRect().top;
+const observer = new IntersectionObserver(entries => animate(entries))
 
-      if (positionFromTop - windowHeight <= 0) {
-        if(i % 2 == 0) {
-          element.classList.add('slideInFromRight');
-        }
-        else {
-          element.classList.add('slideInFromLeft');
-        }
-        element.classList.remove('hidden');
+function animate(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains("odd-section")) {
+        entry.target.classList.add("slideInFromLeft");
+        return;
+      }
+      else {
+        entry.target.classList.add("slideInFromRight");
+        return;
       }
     }
-  }
+  });
+}
 
-  window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', init);
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
 
-  init();
-  console.log(elements);
-  checkPosition();
-})();
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+featureSections.forEach(el => {
+  observer.observe(el);
+})
+

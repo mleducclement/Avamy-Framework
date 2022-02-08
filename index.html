@@ -12,28 +12,24 @@
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
+  <header class="navbar">
     <div class="container flex">
       <a href="index.html"><img src="assets/img/logo_avamy.png" alt="avamy logo"></a>
-      <nav>
-        <ul class="flex">
-          <li><a href="features.html">Features</a></li>
-          <li><a href="tutorials.html">Tutorials</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="resources.html">Resources</a></li>
+      <nav class="flex">
+        <ul class="flex nav-menu">
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+          <li class="nav-item"><a href="docs.html" class="nav-link">Docs</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
         </ul>
       </nav>
-      <div class="searchbox">
-        <input type="text" name="" placeholder="Search">
-      </div>
-      <div class="icon-container">
-        <a class="navbar-icon-link" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a class="navbar-icon-link" href="https://github.com/"><i class="fab fa-github"></i></a>
-        <a class="navbar-icon-link" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>
-        </a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -76,7 +72,7 @@
         <div class="flex flex-column">
           <h3>Intuitive syntax</h3>
           <p>Sed consequat eget purus eget lobortis. Quisque id lectus eu dui pulvinar interdum ut id ex. Sed nec risus viverra, efficitur enim sit amet, dapibus ex. Quisque feugiat feugiat erat eget convallis.</p>
-          <a href="tutorials.html" class="btn card">Download latest release : 8.31</a>
+          <a href="tutorials.html" class="btn card text-center">Download latest release</a>
         </div>
         <img src="assets/img/code-example.png" alt="">
       </div>
@@ -98,28 +94,28 @@
   <!-- Features -->
   <section class="features">
     <div class="container">
-      <div class="feature-section white-text grid grid-3 hidden">
+      <div class="feature-section white-text grid grid-3">
         <div class="feature-text">
           <h3 class="">Title 1</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in doloribus est fugiat accusantium. Est itaque, fugiat repellendus, quasi inventore cum sint tempore amet vero odit ipsa reprehenderit natus expedita, quas quod facilis ea at nam ratione eveniet nemo commodi deleniti non? Inventore similique minima laboriosam. Beatae quo eligendi dicta.</p>
         </div>
         <img src="assets/img/report.png" alt="">
       </div>
-      <div class="feature-section white-text grid grid-3 hidden">
+      <div class="feature-section odd-section white-text grid grid-3">
         <img src="assets/img/security.png" alt="">
         <div class="feature-text feature-text-reverse">
           <h3 class="">Title 2</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in doloribus est fugiat accusantium. Est itaque, fugiat repellendus, quasi inventore cum sint tempore amet vero odit ipsa reprehenderit natus expedita, quas quod facilis ea at nam ratione eveniet nemo commodi deleniti non? Inventore similique minima laboriosam. Beatae quo eligendi dicta.</p>
         </div>     
       </div>
-      <div class="feature-section white-text grid grid-3 hidden">
+      <div class="feature-section white-text grid grid-3">
         <div class="feature-text">
           <h3 class="">Title 3</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in doloribus est fugiat accusantium. Est itaque, fugiat repellendus, quasi inventore cum sint tempore amet vero odit ipsa reprehenderit natus expedita, quas quod facilis ea at nam ratione eveniet nemo commodi deleniti non? Inventore similique minima laboriosam. Beatae quo eligendi dicta.</p>
         </div>
         <img src="assets/img/ecommerce.png" alt="">
       </div>
-      <div class="feature-section white-text grid grid-3 hidden">
+      <div class="feature-section odd-section white-text grid grid-3">
         <img src="assets/img/mobile-screens.png" alt="">
         <div class="feature-text feature-text-reverse">
           <h3 class="">Title 4</h3>

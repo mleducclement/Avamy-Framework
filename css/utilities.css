@@ -41,7 +41,7 @@
   color: var(--secondary-text-color);
 }
 
-.active {
+.active-link {
   background-color: var(--primary-color-button-press);
   border-radius: 5px;
 }
@@ -79,6 +79,37 @@
   margin: 10px;
 }
 
-.hidden {
-  opacity: 0;
+/* Hamburger Menu */
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

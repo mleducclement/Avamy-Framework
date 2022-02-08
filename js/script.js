@@ -1,0 +1,33 @@
+(function() {
+  let elements;
+  let windowHeight;
+
+  function init() {
+    elements = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        if(i % 2 == 0) {
+          element.classList.add('slideInFromRight');
+        }
+        else {
+          element.classList.add('slideInFromLeft');
+        }
+        element.classList.remove('hidden');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
+
+  init();
+  console.log(elements);
+  checkPosition();
+})();

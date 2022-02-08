@@ -41,6 +41,11 @@
   color: var(--secondary-text-color);
 }
 
+.active {
+  background-color: var(--primary-color-button-press);
+  border-radius: 5px;
+}
+
 .btn {
   font-weight: bold;
   display: inline-block;
@@ -65,4 +70,15 @@
 .btn-outline:hover {
   background-color: var(--primary-color-button-press);
   color: var(--secondary-text-color);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.hidden {
+  opacity: 0;
 }

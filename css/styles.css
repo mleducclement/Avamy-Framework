@@ -7,7 +7,6 @@
   --primary-color-dark: #b65303;
   --primary-color-light: #e69e63;
   --primary-color-button-press: #ff9900;
-  /* --secondary-color: #0a0b1d; */
   --secondary-color: #0e102c;
   --secondary-color-light: #13165a;
   --tertiary-color: #A2FAA3;
@@ -68,30 +67,39 @@ input:focus {
   z-index: 100;
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
-  height: 50px;
+  height: 60px;
   letter-spacing: 1px;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.navbar a {
-  font-size: 1.3rem;
-  color: var(--navbar-text-color);
-  padding: 0px;
-  margin: 0 5px;
-}
-
-.navbar a:hover {
-  border-bottom: 1px solid var(--navbar-text-color);
-}
-
-#logo {
+.navbar .container > a {
   font-size: 0.5rem;
   width: 80px;
   margin-top: 4px;
 }
 
-#logo img {
+.navbar .container > a img {
   width: 40px;
+}
+
+.navbar .container > a:hover {
+  background: none;
+}
+
+.navbar a {
+  font-size: 1.3rem;
+  color: var(--navbar-text-color);
+  padding: 0px 10px 3px 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  background-color: var(--primary-color-button-press);
+  border-radius: 5px;
+}
+
+#logo img {
+  
 }
 
 #logo:hover {
@@ -319,7 +327,30 @@ input:focus {
 .cta {
   background-color: var(--secondary-color);
   text-align: center;
-  padding-bottom: 50px;
+  padding: 50px 0;
+}
+
+/* Header Banner */
+
+.header-banner {
+  padding: 10px 0;
+  background: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+
+/* Features List */
+
+.pack {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.features-list i {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  border-radius: 50%;
 }
 
 /* Footer */
@@ -346,17 +377,30 @@ input:focus {
   margin: 0px 10px;
 }
 
-/* DEBUGGING CLASSES */
+/* Animations */
 
-.pink {
-  background-color: pink;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.green {
-  background-color: green;
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.red {
-  background-color: red;
+.slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-in;
 }
 
+.slideInFromRight {
+  animation: slideInFromRight 0.5s ease-in;
+}

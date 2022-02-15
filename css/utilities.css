@@ -3,6 +3,7 @@
   margin: 0 auto;
   overflow: auto;
   padding: 0 40px;
+  overflow-x: hidden;
 }
 
 .flex {
@@ -38,48 +39,68 @@
 }
 
 .white-text {
-  color: var(--secondary-text-color);
+  color: var(--inverted-text);  
 }
 
 .active-link {
-  background-color: var(--primary-color-button-press);
-  border-radius: 5px;
+  border-bottom: 2px solid white;
 }
 
 .btn {
   font-weight: bold;
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary);
   border: none;
   border-radius: 5px;
-  color: var(--secondary-color);}
+  color: var(--inverted-text);}
 
 .btn:hover {
-  background-color: var(--primary-color-button-press);
+  background-color: white;
   transition: linear 0.2s;
+  color: var(--text);
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary);
   color: var(--secondary-text-color);
-
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color-button-press);
+  background-color: var(--secondary);
   color: var(--secondary-text-color);
 }
 
+.sidenav-padding {
+  padding-right: 200px;
+}
+
+/* Components */
+
+.alert {
+  background-color(--light-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.alert-success {
+  background-color: var(--success);
+  color: var(--inverted-text);
+}
+
+.alert i {
+  margin-right: 10px;
+}
+
 .card {
+  background: #f4f4f4;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 10px;
 }
-
-/* Hamburger Menu */
 
 .hamburger {
   display: none;
@@ -92,7 +113,102 @@
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: white;
 }
 
+/* Colors */
 
+.bg-dark {
+  background-color: #333;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.yellow-highlight {
+  background-color: rgba(225, 229, 100, 0.5);
+}
+
+/* Margin & Padding */
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.m-3 {
+  margin: 2.5rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+.my-1 {
+  margin: 1rem;
+}
+
+.my-2 {
+  margin: 2rem;
+}
+
+.my-3 {
+  margin: 2.5rem;
+}
+
+.my-4 {
+  margin: 3rem;
+}
+
+.my-5 {
+  margin: 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 2.5rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.py-1 {
+  padding: 1rem;
+}
+
+.py-2 {
+  padding: 2rem;
+}
+
+.py-3 {
+  padding: 2.5rem;
+}
+
+.py-4 {
+  padding: 3rem;
+}
+
+.py-5 {
+  padding: 4rem;
+}

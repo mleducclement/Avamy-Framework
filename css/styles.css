@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Sarabun:wght@300;600;700&display=swap');
+
 /* Color variables */
 
 :root {
-  --primary-color: #e46701;
-  --primary-color-dark: #b65303;
-  --primary-color-light: #e69e63;
-  --primary-color-button-press: #ff9900;
-  --secondary-color: #0e102c;
-  --secondary-color-light: #13165a;
-  --tertiary-color: #A2FAA3;
-  --primary-text-color: #2e2e2e;
-  --secondary-text-color: #f1f1f1;
-  --tertiary-text-color: #5053aa;
-  --navbar-text-color: #000000;
+  --primary: #1d3b69;
+  --secondary: #4d7baf;
+  --accent: #2d486b;
+  --background: #eaf3f5;
+  --footer-background: #000000;
+
+  --success: #5cb85c;
+  --warning: #FFFF00;
+  --error: #FF0000; 
+  --info: #0000FF;
+
+  --bg-light: #e4e4e4;
+  --bg-dark: #1f1f1f;
+
+  --text: #2e2e2e;
+  --inverted-text: #f1f1f1;
+  --accented-text-light: #ffffff;
+  --accented-text-dark: #082955;
+  --link-hover: #fff;
+  --inverted-link-hover: #000;
 }
 
-/* General */
+/* #region General Styles */
 
 * {
   box-sizing: border-box;
@@ -26,6 +36,7 @@
 body {
   font-family: 'Sarabun', sans-serif;
   color: var(--primary-text-color);
+  background-color: var(--background);
   line-height: 1.6;
 }
 
@@ -39,8 +50,20 @@ a {
 }
 
 h1, h2 {
+  font-weight: 300;
   line-height: 1.2;
-  margin: 5px 0;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+code, pre {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
 img {
@@ -57,24 +80,25 @@ input {
 input:focus {
   outline: none;
 }
+/* #endregion */
 
-/* Navbar */
+/* #region Navbar */
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
-  height: 65px;
+  background-color: var(--secondary);
+  height: 50px;
   letter-spacing: 1px;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .container > a {
-  font-family: "Comfortaa", "serif";
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  color: var(--accented-text-light);
+  font-family: "Comfortaa", serif;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   padding-top: 5px;
   letter-spacing: 3px;
 }
@@ -90,24 +114,28 @@ input:focus {
 }
 
 .nav-link {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  padding: 0px 7px 3px 7px;
-  color: var(--navbar-text-color);
+  padding: 0px 7px 7px 7px;
+  margin: 0px 2px;
+  color: var(--inverted-text);
 }
 
 .nav-link:hover {
-  background-color: var(--primary-color-button-press);
-  border-radius: 5px;
+  border-bottom: 2px solid white;
 }
 
-/* Hero */
+/* #endregion */
+
+/* #region Home Page */
+
+/* ==Hero== */
 
 .hero {
   position: relative;
   height: 350px;
-  background-color: var(--secondary-color);
-  color: var(--secondary-text-color);
+  background-color: var(--primary);
+  color: var(--inverted-text);
 
 }
 
@@ -115,7 +143,7 @@ input:focus {
   font-size: 3rem;
   font-weight: bold;
   margin: 50px 0 0 0;
-  color: var(--primary-color);
+  color: var(--accented-text-light);
 }
 
 .hero p {
@@ -136,11 +164,11 @@ input:focus {
   bottom: -35px;
   right: 0;
   left: 0;
-  background: white;
+  background: var(--background);
   transform: skewY(-2deg);
 }
 
-/* Overview */
+/* ==Overview== */
 
 .overview .grid {
   align-items: start;
@@ -150,10 +178,10 @@ input:focus {
 .overview .grid h3 {
   font-size: 1.1rem;
   margin: 0 0 20px;
-  color: var(--secondary-color-light);
+  color: var(--accent);
 }
 
-/* Code */
+/* ==Code== */
 
 .code {
   margin-top: 100px;
@@ -174,7 +202,7 @@ input:focus {
 
 .code .grid h3 {
   margin: 0 0 20px;
-  color: var(--secondary-color-light);
+  color: var(--accented-text-dark);
 }
 
 .code .grid > img {
@@ -188,7 +216,7 @@ input:focus {
   margin: 50px 0;
 }
 
-/* Newsletter */
+/* ==Newsletter== */
 
 .newsletter {
   padding: 50px 0;
@@ -210,7 +238,7 @@ input:focus {
   padding: 10px 0 10px 25px;
   width: 500px;
   height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary);
   border-radius: 25px;
 }
 
@@ -224,18 +252,24 @@ input:focus {
   width: 30%;
   position: absolute;
   right: 0px;
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
+  background-color: var(--primary);
+  color: var(--inverted-text);
   border: none;
   padding: 15px 30px;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
 }
 
-/* Features */
+.newsletter button:hover {
+  color: #4d7baf;
+  background-color: var(--primary);
+}
+
+/* ==Features== */
 
 .features {
-  background-color: var(--secondary-color);
+  background-color: var(--primary);
+  color: var(--inverted-text);
   padding: 50px 0;
 }
 
@@ -243,7 +277,7 @@ input:focus {
   max-width: 800px;
   margin: 0 auto;
   padding: 25px 20px;
-  border-top: 1px solid rgba(146, 80, 36, 0.6);
+  border-top: 1px solid var(--accent);
 }
 
 .feature-text {
@@ -259,43 +293,24 @@ input:focus {
   border-top: none;
 }
 
-/* Call to action */
+/* #endregion */
+
+/* #region Universal Elements */
+
+/* ==Call to action== */
 
 .cta {
-  background-color: #12111b;
+  background-color: #082955;
   text-align: center;
   padding: 50px 0;
 }
 
-/* Header Banner */
-
-.header-banner {
-  padding: 10px 0;
-  background: var(--secondary-color);
-  color: var(--secondary-text-color);
-}
-
-/* Features List */
-
-.pack {
-  padding: 50px 0;
-  border-bottom: 1px solid var(--secondary-color);
-}
-
-.features-list i {
-  margin: 10px 0;
-  padding: 15px;
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
-  border-radius: 50%;
-}
-
-/* Footer */
+/* ==Footer== */
 
 .footer {
   padding: 3rem;
-  background: #050505;
-  color: var(--secondary-text-color);
+  background: black;
+  color: var(--inverted-text);
 }
 
 .footer li {
@@ -303,7 +318,7 @@ input:focus {
 }
 
 .footer a:hover {
-  color: var(--primary-color);
+  color: var(--secondary);
 }
 
 .footer .social {
@@ -314,7 +329,7 @@ input:focus {
   margin: 0px 10px;
 }
 
-/* Animations */
+/* ==Animations== */
 
 @keyframes slideInFromLeft {
   0% {
@@ -340,4 +355,43 @@ input:focus {
 
 .slideInFromRight {
   animation: slideInFromRight 0.5s ease-in;
+}
+
+/* #endregion */
+
+/* #region Features List Page */
+
+.pack {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.features-list i {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: var(--secondary);
+  color: var(--inverted-text);
+  border-radius: 50%;
+}
+
+/* #endregion */
+
+/* #region Tutorial Page */
+
+.tutorial .grid {
+  padding: 50px 0;
+  grid-template-columns: 350px 2fr;
+  align-items: flex-start;
+}
+
+.tutorial li {
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.tutorial li>a {
+  color: #3a3a3a;
+}
+
+.tutorial li>a:hover {
+  color: var(--);
 }

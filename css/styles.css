@@ -7,6 +7,7 @@
   --secondary: #4d7baf;
   --accent: #2d486b;
   --background: #eaf3f5;
+  --cta: #082955;
   --footer-background: #000000;
 
   --success: #5cb85c;
@@ -19,8 +20,7 @@
 
   --text: #2e2e2e;
   --inverted-text: #f1f1f1;
-  --accented-text-light: #ffffff;
-  --accented-text-dark: #082955;
+  --accented-text-light: #FF9C82;
   --link-hover: #fff;
   --inverted-link-hover: #000;
 }
@@ -95,7 +95,7 @@ input:focus {
 }
 
 .navbar .container > a {
-  color: var(--accented-text-light);
+  color: var(--inverted-text);
   font-family: "Comfortaa", serif;
   font-size: 1.4rem;
   line-height: 1.4rem;
@@ -122,7 +122,7 @@ input:focus {
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--accented-text-light);
 }
 
 /* #endregion */
@@ -143,7 +143,7 @@ input:focus {
   font-size: 3rem;
   font-weight: bold;
   margin: 50px 0 0 0;
-  color: var(--accented-text-light);
+  color: var(--inverted-text);
 }
 
 .hero p {
@@ -300,7 +300,7 @@ input:focus {
 /* ==Call to action== */
 
 .cta {
-  background-color: #082955;
+  background-color: var(--cta);
   text-align: center;
   padding: 50px 0;
 }
@@ -384,14 +384,25 @@ input:focus {
   align-items: flex-start;
 }
 
-.tutorial li {
+.tutorial nav li {
   border-bottom: 1px solid var(--bg-light);
 }
 
-.tutorial li>a {
-  color: #3a3a3a;
+.tutorial nav li>a {
+  color: var(--text);
 }
 
-.tutorial li>a:hover {
-  color: var(--);
+.tutorial nav li>a:hover {
+  color: var(--secondary);
+}
+
+.tutorial p {
+  margin: 20px 0;
+}
+
+.tutorial img {
+  width: 80%;
+  min-width: 400px;
+  display: block;
+  margin: 0 auto;
 }

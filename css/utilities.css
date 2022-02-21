@@ -96,7 +96,7 @@
 /* Components */
 
 .alert {
-  background-color(--light-color);
+  background-color: var(--light-color);
   padding: 10px 20px;
   font-weight: bold;
   margin: 15px 0;

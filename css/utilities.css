@@ -85,12 +85,12 @@
 
 .color-link {
   font-weight: bold;
-  color: var(--secondary);
+  color: var(--accented-text-light);
 }
 
 .color-link:hover {
   color: var(--inverted-text);
-  background-color: var(--secondary);
+  background-color: var(--accented-text-light);
 }
 
 /* Components */

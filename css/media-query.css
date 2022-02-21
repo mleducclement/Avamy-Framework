@@ -168,6 +168,18 @@
   }
 }
 
+/* Targeting mobile devices in landscape mode for docs page */
+
+@media only screen and (max-height: 800px) {
+  .docs .hidden {
+    visibility: hidden;
+  }
+
+  .docs .docs-text {
+    margin: 50px auto;
+  }
+}
+
 /* Mobile */
 
 @media only screen and (max-width: 450px) {

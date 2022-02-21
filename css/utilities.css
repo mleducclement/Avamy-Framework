@@ -50,7 +50,7 @@
 }
 
 .active-link {
-  border-bottom: 2px solid var(--accented-text-light);
+  border-bottom: 2px solid var(--background);
 }
 
 .btn {

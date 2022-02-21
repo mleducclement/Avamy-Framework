@@ -20,7 +20,7 @@
 
   --text: #2e2e2e;
   --inverted-text: #f1f1f1;
-  --accented-text-light: #FF9C82;
+  --accented-text-light: #1c96fa;
   --link-hover: #fff;
   --inverted-link-hover: #000;
 }
@@ -122,7 +122,7 @@ input:focus {
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid var(--accented-text-light);
+  border-bottom: 2px solid var(--background);
 }
 
 /* #endregion */
@@ -421,3 +421,16 @@ input:focus {
 /* #endregion */
 
 /* #region Resources Page */
+
+.resources {
+  padding: 50px 0;
+}
+
+.resources a {
+  color: var(--accented-text-light);
+  font-size: 1.3rem;
+}
+
+.resources a:hover {
+  color: var(--accent);
+}

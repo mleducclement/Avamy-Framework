@@ -143,11 +143,11 @@
     text-align: center;
   }
 
-  .tutorial .hidden {
+  .docs .hidden {
     visibility: hidden;
   }
 
-  .tutorial .docs {
+  .docs .docs-text {
     margin: 50px auto;
   }
 

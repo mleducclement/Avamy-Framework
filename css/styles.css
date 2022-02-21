@@ -376,44 +376,48 @@ input:focus {
 
 /* #endregion */
 
-/* #region Tutorial Page */
+/* #region Docs Page */
 
-.tutorial .grid {
+.docs .grid {
   padding: 50px 0;
   grid-template-columns: 1fr 2fr;
   align-items: flex-start;
 }
 
-.tutorial nav li {
+.docs nav li {
   border-bottom: 1px solid var(--bg-light);
 }
 
-.tutorial nav li>a {
+.docs nav li>a {
   color: var(--text);
 }
 
-.tutorial nav li>a:hover {
+.docs nav li>a:hover {
   color: var(--secondary);
 }
 
-.tutorial p {
+.docs p {
   margin: 20px 0;
 }
 
-.tutorial img {
+.docs img {
   width: 75%;
   min-width: 275px;
   display: block;
   margin: 0 auto;
 }
 
-.tutorial .fixed {
+.docs .fixed {
   width: 300px;
   left: 20px;
   position: fixed;
   top: 90px;
 }
 
-.tutorial .docs {
+.docs .docs-text {
   margin: 50px 0 50px 340px;
 }
+
+/* #endregion */
+
+/* #region Resources Page */

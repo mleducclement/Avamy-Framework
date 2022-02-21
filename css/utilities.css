@@ -42,6 +42,13 @@
   color: var(--inverted-text);  
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
 .active-link {
   border-bottom: 2px solid var(--accented-text-light);
 }

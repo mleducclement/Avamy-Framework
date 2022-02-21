@@ -143,6 +143,14 @@
     text-align: center;
   }
 
+  .tutorial .hidden {
+    visibility: hidden;
+  }
+
+  .tutorial .docs {
+    margin: 50px auto;
+  }
+
   .footer .grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);

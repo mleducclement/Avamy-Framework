@@ -380,7 +380,7 @@ input:focus {
 
 .tutorial .grid {
   padding: 50px 0;
-  grid-template-columns: 350px 2fr;
+  grid-template-columns: 1fr 2fr;
   align-items: flex-start;
 }
 
@@ -401,8 +401,19 @@ input:focus {
 }
 
 .tutorial img {
-  width: 80%;
-  min-width: 400px;
+  width: 75%;
+  min-width: 275px;
   display: block;
   margin: 0 auto;
+}
+
+.tutorial .fixed {
+  width: 300px;
+  left: 20px;
+  position: fixed;
+  top: 90px;
+}
+
+.tutorial .docs {
+  margin: 50px 0 50px 340px;
 }
